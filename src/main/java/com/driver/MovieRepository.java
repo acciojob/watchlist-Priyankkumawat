@@ -45,8 +45,8 @@ public class MovieRepository {
         }
         return null;
     }
-    public List<String> findAllMovies(){
-        return new ArrayList<>(movieMap.keySet());
+    public List<Movie> findAllMovies(){
+        return new ArrayList<>(movieMap.values());
     }
     public String deleteDirectorByName(String name){
         if(directorMap.containsKey(name)){
