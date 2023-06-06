@@ -17,7 +17,7 @@ public class MovieService {
     public String addDirector(Director director) {return movieRepository.addDirector(director);}
     public String addMovieDirector(String movie,String director) {return movieRepository.addMovieDirector(movie,director);}
     public Director getDirector(String name) {return movieRepository.getDirector(name);}
-    public List<String> getMoviesByDirectorName(String name){ return movieRepository.getMoviesByDirectorName(name);}
+    public List<Movie> getMoviesByDirectorName(String name){ return movieRepository.getMoviesByDirectorName(name);}
     public List<Movie> findAllMovies(){return movieRepository.findAllMovies();}
     public String deleteDirectorByName(String name){ return movieRepository.deleteDirectorByName(name);}
     public String deleteAllDirectors(){return movieRepository.deleteAllDirectors();}
