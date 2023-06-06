@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/movie")
 public class MovieController {
@@ -42,8 +44,8 @@ public class MovieController {
         return new ResponseEntity(movieService.getMoviesByDirectorName(name),HttpStatus.OK);
     }
     @GetMapping("/findAllMovies")
-    public ResponseEntity<?> findAllMovies(){
-        return new ResponseEntity<>(movieService.findAllMovies(),HttpStatus.OK);
+    public ResponseEntity findAllMovies(){
+        return new ResponseEntity (movieService.findAllMovies(),HttpStatus.OK);
     }
     @DeleteMapping("/deleteDirectorByName")
     public ResponseEntity deleteDirectorByName(@RequestParam String name){
